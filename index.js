@@ -8,9 +8,17 @@ function calculateBMI() {
   console.table({ age, weight, height, male, female });
 
   // You are going to write the code here before the curly braces 👇🏻
-  let convertedHeight = (height / 100)^2;
-  BMI = ((weight/convertedHeight).toFixed(1));
+  
+  // Old Code for BMI 
+  // let convertedHeight = (height / 100)^2;
+  // let BMI = ((weight/convertedHeight).toFixed(1));
+  // alert(`BMI: ${BMI}`);
+
+  let convertedHeight = ((height / 100));
+  let BMI = ((weight/(convertedHeight * convertedHeight)).toFixed(1));
   alert(`BMI: ${BMI}`);
+  
+  
 
   // Check for State according to the BMI value
   if (BMI < 18.5) {
